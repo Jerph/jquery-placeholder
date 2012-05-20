@@ -67,12 +67,12 @@
 
 		$(function() {
 			// Look for forms
-			$(document).delegate('form', 'submit.placeholder', function() {
+			$('form').bind('submit.placeholder', function() {
 				// Clear the placeholder values so they don't get submitted
 				var $inputs = $('.placeholder', this).each(clearPlaceholder);
 				setTimeout(function() {
 					$inputs.each(setPlaceholder);
-				}, 10);
+				}, 50);
 			});
 		});
 
